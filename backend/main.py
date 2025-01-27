@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
-from app.models import Item
+from models import Item
 
 app = FastAPI(
     title="AI Learning Platform API",
@@ -24,7 +24,7 @@ items: List[Item] = []
 
 @app.get("/api/health")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "healthy", "message": "System operational"}
 
 @app.post("/api/items/", response_model=Item)
 async def create_item(item: Item):
