@@ -92,4 +92,24 @@ git push origin feature/your-feature-name
 ```
 5. Create a Pull Request from your fork to this repository
 
-Please make sure to update tests as appropriate and follow the existing code style. 
+Please make sure to update tests as appropriate and follow the existing code style.
+
+## Testing
+
+### Frontend Testing
+```bash
+pnpm test
+```
+
+### Backend Testing
+```bash
+cd backend
+pytest
+```
+
+For coverage report:
+```bash
+pytest --cov=app tests/
+```
+
+Please ensure all tests pass before submitting a pull request. Aim for at least 80% test coverage for new features. 
