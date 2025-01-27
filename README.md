@@ -70,4 +70,26 @@ The backend API will be available at `http://localhost:8001` with Swagger docume
 - Frontend code is in the `pages/` and `components/` directories
 - Backend code is in the `backend/` directory
 - API endpoints are defined in `backend/main.py`
-- Database models are in `backend/app/models.py` 
+- Database models are in `backend/app/models.py`
+
+## Contributing
+
+To contribute to this project:
+
+1. Fork the repository
+2. Create a new branch for your feature:
+```bash
+git checkout -b feature/your-feature-name
+```
+3. Make your changes and commit them:
+```bash
+git add .
+git commit -m "Add your commit message"
+```
+4. Push to your branch:
+```bash
+git push origin feature/your-feature-name
+```
+5. Create a Pull Request from your fork to this repository
+
+Please make sure to update tests as appropriate and follow the existing code style. 
