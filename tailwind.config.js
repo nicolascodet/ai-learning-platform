@@ -2,45 +2,30 @@
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
+      colors: {
+        matrix: {
+          green: '#00ff00',
+          dark: '#001a00',
+        },
+      },
       animation: {
-        'gradient-xy': 'gradient-xy 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out infinite -3s',
-        'text': 'text 5s ease infinite',
+        'matrix-rain': 'matrix-rain 20s linear infinite',
+        'matrix-glow': 'matrix-glow 2s ease-in-out infinite',
       },
       keyframes: {
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          }
+        'matrix-rain': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100%)' },
         },
-        'float': {
-          '0%, 100%': {
-            transform: 'translateY(0)',
-          },
-          '50%': {
-            transform: 'translateY(-20px)'
-          }
+        'matrix-glow': {
+          '0%, 100%': { filter: 'brightness(1)' },
+          '50%': { filter: 'brightness(1.3)' },
         },
-        'text': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          }
-        }
-      }
+      },
     },
   },
   plugins: [],

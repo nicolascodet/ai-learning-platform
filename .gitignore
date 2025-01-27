@@ -1,21 +1,36 @@
 # Next.js
 .next/
+out/
 node_modules/
-.env*.local
+*.log
 
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
 venv/
+ENV/
+
+# Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # IDE
-.vscode/
 .idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
 
 # misc
-.DS_Store
 *.pem
 npm-debug.log*
 yarn-debug.log*

@@ -3,8 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Neural Nexus - AI Learning Platform',
-  description: 'Master AI development through hands-on project-based learning',
+  title: 'Matrix Learning Platform',
+  description: 'Take the red pill and enter the world of AI learning',
 }
 
 export default function RootLayout({
@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="font-mono antialiased">
+        {children}
+      </body>
     </html>
   )
 }
