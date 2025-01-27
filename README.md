@@ -112,4 +112,27 @@ For coverage report:
 pytest --cov=app tests/
 ```
 
-Please ensure all tests pass before submitting a pull request. Aim for at least 80% test coverage for new features. 
+Please ensure all tests pass before submitting a pull request. Aim for at least 80% test coverage for new features.
+
+## Deployment
+
+### Frontend Deployment
+- Build the production version:
+```bash
+pnpm build
+```
+- The build output will be in the `.next` directory
+- Deploy to your preferred hosting service (Vercel recommended)
+
+### Backend Deployment
+- Install production dependencies:
+```bash
+pip install -r requirements.txt
+```
+- Set environment variables for production
+- Run with a production server:
+```bash
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+```
+
+Remember to set appropriate environment variables and security measures for production deployment. 
