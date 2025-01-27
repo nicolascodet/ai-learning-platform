@@ -68,52 +68,34 @@ const courses = [
   }
 ]
 
-export default function CoursesPage() {
+export default function Courses() {
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">Available Courses</h1>
-          <p className="mt-2 text-lg text-gray-600">Start your learning journey today</p>
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {courses.map(course => (
-            <Link 
-              key={course.id}
-              href={`/courses/${course.id}`}
-              className="block bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
-              <div className="p-6">
-                <h2 className="text-xl font-semibold text-gray-900">{course.title}</h2>
-                <p className="mt-2 text-gray-600">{course.description}</p>
-                
-                <div className="mt-4 flex items-center justify-between">
-                  <div className="flex items-center">
-                    <span className="px-2 py-1 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">
-                      {course.level}
-                    </span>
-                  </div>
-                  <span className="text-sm text-gray-500">{course.duration}</span>
-                </div>
-
-                <div className="mt-4">
-                  <h3 className="text-sm font-medium text-gray-700">Topics covered:</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {course.topics.map(topic => (
-                      <span
-                        key={topic}
-                        className="px-2 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded-full"
-                      >
-                        {topic}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+        Available Courses
+      </h1>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Link 
+          href="/courses/python/project1"
+          className="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-cyan-500/30
+                   transform transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/20"
+        >
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-white mb-2">Learn Python 3</h3>
+            <p className="text-gray-300 mb-4">
+              Master Python fundamentals through hands-on projects. Perfect for beginners starting their coding journey.
+            </p>
+            <div className="flex gap-2">
+              <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                Python
+              </span>
+              <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                Beginner
+              </span>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   )
